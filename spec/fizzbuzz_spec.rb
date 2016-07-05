@@ -6,7 +6,6 @@ describe "fizzbuzz" do
     for n in 1..1000 do
       it "fizzbuzz(#{ index + (n * 15) }) returns #{value}" do
         expect(fizzbuzz(index + (n * 15))).to eq (value ? value : index + (n * 15))
-      end
     end
   end
 end
