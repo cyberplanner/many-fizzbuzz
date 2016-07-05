@@ -1,6 +1,7 @@
 def fizzbuzz num
-  if num % 3 == 0 ||  num % 5 == 0
-  "#{"Fizz" if num % 3 == 0}#{"Buzz" if num % 5 == 0}" 
+  f, b = (num % 3 == 0), (num % 5 == 0)
+  if f || b
+    "#{"Fizz" if f}#{"Buzz" if b}"
   else
     num
   end

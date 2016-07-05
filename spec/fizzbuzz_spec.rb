@@ -1,7 +1,7 @@
 require 'fizzbuzz'
 
 describe "fizzbuzz" do
-  carousel = ['fizzbuzz', nil, nil, 'fizz', nil, 'buzz', 'fizz', nil, nil, 'fizz', 'buzz', nil, 'fizz', nil, nil]
+  carousel = ['FizzBuzz', nil, nil, 'Fizz', nil, 'Buzz', 'Fizz', nil, nil, 'Fizz', 'Buzz', nil, 'Fizz', nil, nil]
   carousel.each.with_index do |value, index|
     for n in 1..1000 do
       it "fizzbuzz(#{ index + (n * 15) }) returns #{value}" do
