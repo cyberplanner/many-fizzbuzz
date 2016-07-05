@@ -1,25 +1,12 @@
 require 'fizzbuzz'
 
-describe "FizzBuzz" do
-  
-  it "Returns 'Fizz' when passed 3" do
-    expect(fizzbuzz(3)).to eq "Fizz"
+describe "fizzbuzz" do
+  carousel = ['fizzbuzz', nil, nil, 'fizz', nil, 'buzz', 'fizz', nil, nil, 'fizz', 'buzz', nil, 'fizz', nil, nil]
+  carousel.each.with_index do |value, index|
+    for n in 1..1000 do
+      it "fizzbuzz(#{ index + (n * 15) }) returns #{value}" do
+        expect(fizzbuzz(index + (n * 15))).to eq (value ? value : index + (n * 15))
+      end
+    end
   end
-  
-  it "Returns 'Buzz' when passed 5" do
-    expect(fizzbuzz(5)).to eq "Buzz"
-  end
-  
-  it "Returns 'FizzBuzz' when passed 15" do
-    expect(fizzbuzz(15)).to eq "FizzBuzz"
-  end
-  
-  it "Returns '2' when passed 2" do
-    expect(fizzbuzz(2)).to eq 2
-  end
-  
-  it "Returns '4' when passed 4" do
-    expect(fizzbuzz(4)).to eq 4
-  end
-  
 end
